@@ -1,0 +1,178 @@
+{
+  "categories": [
+    {
+      "id": 1000000000001,
+      "name": "Socials"
+    },
+    {
+      "id": 1000000000002,
+      "name": "Entertainment"
+    },
+    {
+      "id": 1000000000003,
+      "name": "Development"
+    },
+    {
+      "id": 1000000000004,
+      "name": "Productivity"
+    },
+    {
+      "id": 1000000000005,
+      "name": "Home Server"
+    }
+  ],
+  "websites": [
+    {
+      "id": 1000000000101,
+      "name": "Instagram",
+      "url": "https://instagram.com",
+      "categoryId": 1000000000001,
+      "icon": "instagram"
+    },
+    {
+      "id": 1000000000102,
+      "name": "Twitter (X)",
+      "url": "https://x.com",
+      "categoryId": 1000000000001,
+      "icon": "twitter"
+    },
+    {
+      "id": 1000000000103,
+      "name": "Reddit",
+      "url": "https://reddit.com",
+      "categoryId": 1000000000001,
+      "icon": "message-circle"
+    },
+    {
+      "id": 1000000000104,
+      "name": "LinkedIn",
+      "url": "https://linkedin.com",
+      "categoryId": 1000000000001,
+      "icon": "briefcase"
+    },
+
+    {
+      "id": 1000000000201,
+      "name": "YouTube",
+      "url": "https://youtube.com",
+      "categoryId": 1000000000002,
+      "icon": "youtube"
+    },
+    {
+      "id": 1000000000202,
+      "name": "Netflix",
+      "url": "https://netflix.com",
+      "categoryId": 1000000000002,
+      "icon": "film"
+    },
+    {
+      "id": 1000000000203,
+      "name": "Spotify",
+      "url": "https://spotify.com",
+      "categoryId": 1000000000002,
+      "icon": "music"
+    },
+    {
+      "id": 1000000000204,
+      "name": "Twitch",
+      "url": "https://twitch.tv",
+      "categoryId": 1000000000002,
+      "icon": "tv"
+    },
+
+    {
+      "id": 1000000000301,
+      "name": "GitHub",
+      "url": "https://github.com",
+      "categoryId": 1000000000003,
+      "icon": "github"
+    },
+    {
+      "id": 1000000000302,
+      "name": "Stack Overflow",
+      "url": "https://stackoverflow.com",
+      "categoryId": 1000000000003,
+      "icon": "code"
+    },
+    {
+      "id": 1000000000303,
+      "name": "DevDocs",
+      "url": "https://devdocs.io",
+      "categoryId": 1000000000003,
+      "icon": "book-open"
+    },
+    {
+      "id": 1000000000304,
+      "name": "CodePen",
+      "url": "https://codepen.io",
+      "categoryId": 1000000000003,
+      "icon": "terminal"
+    },
+
+    {
+      "id": 1000000000401,
+      "name": "Notion",
+      "url": "https://notion.so",
+      "categoryId": 1000000000004,
+      "icon": "file-text"
+    },
+    {
+      "id": 1000000000402,
+      "name": "Google Drive",
+      "url": "https://drive.google.com",
+      "categoryId": 1000000000004,
+      "icon": "folder"
+    },
+    {
+      "id": 1000000000403,
+      "name": "Trello",
+      "url": "https://trello.com",
+      "categoryId": 1000000000004,
+      "icon": "layout"
+    },
+    {
+      "id": 1000000000404,
+      "name": "Slack",
+      "url": "https://slack.com",
+      "categoryId": 1000000000004,
+      "icon": "message-square"
+    },
+
+    {
+      "id": 1000000000501,
+      "name": "Proxmox",
+      "url": "https://192.168.1.10:8006",
+      "categoryId": 1000000000005,
+      "icon": "server"
+    },
+    {
+      "id": 1000000000502,
+      "name": "Nextcloud",
+      "url": "https://192.168.1.20",
+      "categoryId": 1000000000005,
+      "icon": "cloud"
+    },
+    {
+      "id": 1000000000503,
+      "name": "Pi-hole",
+      "url": "http://pi.hole/admin",
+      "categoryId": 1000000000005,
+      "icon": "shield"
+    },
+    {
+      "id": 1000000000504,
+      "name": "Portainer",
+      "url": "https://192.168.1.30:9443",
+      "categoryId": 1000000000005,
+      "icon": "box"
+    }
+  ],
+  "theme": "dark",
+  "collapsedCategories": {
+    "1000000000001": false,
+    "1000000000002": false,
+    "1000000000003": false,
+    "1000000000004": false,
+    "1000000000005": false
+  }
+}

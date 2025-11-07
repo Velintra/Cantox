@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANTOX | Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/Cantox.png" type="image/png">
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a class="logo-lnk" href="./index.html"> <h1 class="logo">CANTOX</h1></a>
+            </div>
+            <div class="navbar-right">
+                <button id="themeToggle" class="nav-button" title="Toggle theme"></button>
+                <button id="settingsBtn" class="nav-button" title="Settings"></button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div id="homeView" class="view active">
+                <div id="categoriesContainer" class="categories-container">
+                </div>
+            </div>
+
+            <div id="settingsView" class="view">
+                <div class="settings-container">
+                    <div class="settings-tabs">
+                        <button class="tab-button active" data-tab="categories">Categories</button>
+                        <button class="tab-button" data-tab="websites">Websites</button>
+                        <button class="tab-button" data-tab="config">Config</button>
+                    </div>
+
+                    <div id="categoriesTab" class="tab-content active">
+                        <div class="tab-section">
+                            <h3>Add New Category</h3>
+                            <div class="form-group">
+                                <input type="text" id="categoryName" placeholder="Category name" class="input-field">
+                                <button id="addCategoryBtn" class="btn btn-primary">Add Category</button>
+                            </div>
+                        </div>
+
+                        <div class="tab-section">
+                            <h3>Existing Categories</h3>
+                            <div id="categoriesList" class="items-list">
+                                <!-- Categories will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="websitesTab" class="tab-content">
+                        <div class="tab-section">
+                            <h3>Add New Website</h3>
+                            <div class="form-group">
+                                <input type="text" id="websiteName" placeholder="Website name" class="input-field">
+                                <input type="url" id="websiteUrl" placeholder="Website URL" class="input-field">
+                                <select id="websiteCategory" class="input-field">
+                                    <option value="">Select category</option>
+                                </select>
+                                <button id="iconPickerBtn" class="btn btn-secondary">Select Icon</button>
+                                <div id="selectedIconPreview" class="icon-preview"></div>
+                            </div>
+                            <button id="addWebsiteBtn" class="btn btn-primary">Add Website</button>
+                        </div>
+
+                        <div class="tab-section">
+                            <h3>Existing Websites</h3>
+                            <div id="websitesList" class="items-list">
+                                <!-- Websites will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div id="configTab" class="tab-content">
+                        <div class="tab-section">
+                            <h3>Export Configuration</h3>
+                            <p style="color: hsl(var(--muted-foreground)); margin-bottom: var(--spacing-sm);">Exports categories, websites, icons, theme, and interface settings to a JSON file.</p>
+                            <button id="exportConfigBtn" class="btn btn-secondary">Export to JSON</button>
+                        </div>
+                        <div class="tab-section">
+                            <h3>Import Configuration</h3>
+                            <p style="color: hsl(var(--muted-foreground)); margin-bottom: var(--spacing-sm);">Import a previously exported JSON to restore your dashboard.</p>
+                            <div class="form-group" style="gap: var(--spacing-sm);">
+                                <div id="importDropzone" class="dropzone" tabindex="0" aria-label="Drop JSON here or click to browse">
+                                    <div class="dropzone-main">Drag & drop JSON here or click to browse</div>
+                                    <div class="dropzone-sub">Only .json files</div>
+                                </div>
+                                <input type="file" id="importConfigFile" accept="application/json" style="display:none">
+                                <button id="importConfigBtn" class="btn btn-secondary">Import JSON</button>
+                            </div>
+                        </div>
+                        <div class="tab-section">
+                            <h3>Reset Configuration</h3>
+                            <p style="color: hsl(var(--muted-foreground)); margin-bottom: var(--spacing-sm);">Removes all categories and websites. Theme remains unchanged.</p>
+                            <button id="resetConfigBtn" class="btn btn-danger">Reset All</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="iconPickerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Select an Icon</h3>
+                <button id="closeIconPicker" class="close-btn">&times;</button>
+            </div>
+            <input type="text" id="iconSearch" placeholder="Search icons..." class="input-field">
+            <div id="iconGrid" class="icon-grid">
+            </div>
+        </div>
+    </div>
+
+    <div id="genericModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="genericModalTitle">Notice</h3>
+                <button id="genericModalClose" class="close-btn">&times;</button>
+            </div>
+            <div id="genericModalBody" class="modal-body"></div>
+            <div class="modal-actions" style="display:flex; gap: 0.5rem; padding: 1rem; justify-content: flex-end;">
+                <button id="genericModalCancel" class="btn">Cancel</button>
+                <button id="genericModalConfirm" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
